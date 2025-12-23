@@ -1,0 +1,46 @@
+# Secrets
+.env
+.env.local
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+env/
+
+# IDEs
+.vscode/
+.idea/
+
+# Distribution / Build
+build/
+dist/
+*.egg-info/
+
+# Jupyter Notebooks (large files)
+*.ipynb
+
+# Project Reports
+Project Reports/
+
+# Artifacts (Optional - verify depending on size)
+# models/*.h5
+# models/*.pkl
+# But for now we keep models committed as they are part of the demo
+
+# Large Data Files - DO NOT COMMIT
+data/
+*.csv
+creditcard/
+ieee-fraud-detection/
+Synthetic Financial Datasets For Fraud Detection/
+processed_data/
+training_results/
+
+# ChromaDB Vector Store
+processed_data/chroma_db/
+
+# Logs
+*.log

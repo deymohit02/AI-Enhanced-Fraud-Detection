@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI FraudGuard | Real-time Detection</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="logo">
+                <i class="fas fa-shield-alt"></i>
+                <h1>AI FraudGuard</h1>
+            </div>
+            <div class="stats-pill">
+                <span id="tx-count">0</span> Transactions Analyzed
+            </div>
+        </header>
+
+        <main>
+            <!-- Input Section -->
+            <section class="card input-card">
+                <h2><i class="fas fa-search-dollar"></i> Analyze Transaction</h2>
+                <form id="prediction-form">
+                    <div class="form-group">
+                        <label>Transaction Amount ($)</label>
+                        <input type="number" id="amount" step="0.01" placeholder="e.g. 150.00" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Time (Seconds from start)</label>
+                        <input type="number" id="time" placeholder="e.g. 3600" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Merchant Category (Simulated)</label>
+                        <select id="category">
+                            <option value="retail">Retail</option>
+                            <option value="travel">Travel</option>
+                            <option value="digital">Digital Goods</option>
+                            <option value="food">Food & Dining</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group checkbox-group"
+                        style="display: flex; align-items: center; gap: 10px; margin-bottom: 20px;">
+                        <input type="checkbox" id="simulate-fraud" style="width: auto; margin: 0;">
+                        <label for="simulate-fraud"
+                            style="margin: 0; cursor: pointer; color: #ff4444; font-weight: 500;">Simulate Fraudulent
+                            Pattern</label>
+                    </div>
+
+                    <button type="submit" id="analyze-btn">
+                        <span>Check for Fraud</span>
+                        <div class="loader hidden" id="btn-loader"></div>
+                    </button>
+                </form>
+            </section>
+
+            <!-- Results Section -->
+            <section class="results-column">
+                <!-- Prediction Result -->
+                <div id="result-card" class="card result-card hidden">
+                    <div class="result-header">
+                        <h3>Analysis Result</h3>
+                        <span class="badge" id="risk-badge">Low Risk</span>
+                    </div>
+
+                    <div class="score-container">
+                        <div class="score-ring" id="score-ring">
+                            <span id="score-val">0%</span>
+                        </div>
+                        <p>Fraud Probability</p>
+                    </div>
+
+                    <div id="action-area">
+                        <p class="result-msg" id="result-msg">Transaction appears legitimate.</p>
+                        <button id="explain-btn" class="secondary-btn">
+                            <i class="fas fa-magic"></i> Ask AI "Why?"
+                        </button>
+                    </div>
+                </div>
+
+                <!-- AI Explanation -->
+                <div id="explanation-card" class="card ai-card hidden">
+                    <h3><i class="fas fa-robot"></i> Gemini AI Analysis</h3>
+                    <div id="explanation-content">
+                        <div class="skeleton-text"></div>
+                        <div class="skeleton-text"></div>
+                        <div class="skeleton-text"></div>
+                    </div>
+
+                    <div id="similar-cases-section" class="hidden">
+                        <h4>Similar Historical Patterns</h4>
+                        <ul id="similar-list"></ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
