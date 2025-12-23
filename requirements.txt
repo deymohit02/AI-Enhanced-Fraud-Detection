@@ -1,16 +1,70 @@
+# Core Web Framework
 flask==3.0.0
 flask-cors==4.0.0
 gunicorn==21.2.0
+
+# Data Processing
 pandas==2.0.3
 numpy<2.0.0
+
+# Apache Spark - Distributed Processing
+pyspark==3.5.0
+
+# Machine Learning - Traditional
 scikit-learn==1.3.0
 xgboost==2.0.0
-tensorflow==2.13.0
-supabase==2.0.0
-google-generativeai==0.3.1
-chromadb==0.4.18
-python-dotenv==1.0.0
+lightgbm==4.1.0
+catboost==1.2.2
 imbalanced-learn==0.11.0
+
+# Deep Learning - TensorFlow/Keras
+tensorflow==2.13.0
+
+# Deep Learning - PyTorch
+torch==2.1.0
+torch-geometric==2.4.0
+
+# RAG & LLM
+langchain==0.1.0
+langchain-community==0.0.13
+groq==0.4.1  # Free AI API (Llama-3.3-70B)
+sentence-transformers==2.2.2  # Local embeddings
+
+# Vector Store
+faiss-cpu==1.7.4
+chromadb==0.4.18
+
+# Message Queue
+pika==1.3.2  # RabbitMQ client
+
+# Database
+supabase==2.0.0
+psycopg2-binary==2.9.9
+sqlalchemy==2.0.23
+
+# Caching
+redis==5.0.1
+
+# API Validation
+pydantic==2.5.0
+
+# Utilities
+python-dotenv==1.0.0
+requests==2.31.0
+
+# Monitoring & Visualization
 matplotlib==3.7.2
 seaborn==0.12.2
 plotly==5.15.0
+streamlit==1.29.0  # For monitoring dashboard
+
+# Model Optimization
+onnx==1.15.0
+onnxruntime==1.16.3
+
+# Hyperparameter Optimization
+optuna==3.5.0
+
+# Testing
+pytest==7.4.3
+pytest-asyncio==0.21.1
