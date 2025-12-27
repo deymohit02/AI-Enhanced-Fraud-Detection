@@ -22,9 +22,6 @@ dist/
 # Jupyter Notebooks (large files)
 *.ipynb
 
-# Project Reports
-Project Reports/
-
 # Artifacts (Optional - verify depending on size)
 # models/*.h5
 # models/*.pkl
