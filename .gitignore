@@ -1,43 +1,82 @@
-# Secrets
-.env
-.env.local
-
 # Python
 __pycache__/
 *.py[cod]
 *$py.class
-venv/
-.venv/
+*.so
+.Python
 env/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnp/
+.pnp.js
+dist/
+dist-ssr/
+*.local
 
 # IDEs
 .vscode/
 .idea/
+*.swp
+*.swo
+*~
+.DS_Store
 
-# Distribution / Build
-build/
-dist/
-*.egg-info/
-
-# Jupyter Notebooks (large files)
-*.ipynb
-
-# Artifacts (Optional - verify depending on size)
-# models/*.h5
-# models/*.pkl
-# But for now we keep models committed as they are part of the demo
-
-# Large Data Files - DO NOT COMMIT
-data/
-*.csv
-creditcard/
-ieee-fraud-detection/
-Synthetic Financial Datasets For Fraud Detection/
-processed_data/
-training_results/
-
-# ChromaDB Vector Store
-processed_data/chroma_db/
+# Environment
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 
 # Logs
+logs/
 *.log
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Model artifacts
+*.h5
+*.hdf5
+
+# OS
+Thumbs.db
+
+# Test coverage
+.coverage
+htmlcov/
+.pytest_cache/
+
+# Temporary files
+*.tmp
+temp/
+tmp/
+
+# Data
+data/
+*.csv
+*.pkl
+!models/*.pkl
